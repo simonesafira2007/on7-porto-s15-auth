@@ -18,7 +18,7 @@ const getAll = (req, res) => {
 
   jwt.verify(token, SECRET, function (erro) {
     if (erro) {
-      return res.status(403).send("Esse token não é válido!");
+      return res.status(403).send("Este token não é válido!");
     }
 
     tarefas.find(function (err, tarefas) {
@@ -43,7 +43,7 @@ const getById = (req, res) => {
 
   jwt.verify(token, SECRET, (err) => {
     if (err) {
-      return res.status(403).send("Token não é válido");
+      return res.status(403).send("Este token não é válido");
     }
 
     tarefas.find({ id }, (err, tarefas) => {
@@ -68,7 +68,7 @@ const postTarefa = (req, res) => {
 
   jwt.verify(token, SECRET, (err) => {
     if (err) {
-      return res.status(403).send("Token não é válido");
+      return res.status(403).send("Este token não é válido");
     }
 
     let tarefa = new tarefas(req.body);
