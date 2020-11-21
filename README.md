@@ -54,7 +54,7 @@
 3. Gerar hash com senha recebida no body da request
 `$ bcrypt.hashSync(request.body.senha, 10);`
 
-4. Criar nova colabora no banco com a senha hasherizada e o login (email) recebido no body da request
+4. Criar nova colaboradora no banco com a senha hasherizada e o login (email) recebido no body da request
 
 ### Criar rota de login
 
@@ -74,3 +74,4 @@
 `$ jwt.sign({ name: colaboradora.name }, SECRET);`
 
 6. Bater na rota `getAll` via Postman com o token gerado
+ 

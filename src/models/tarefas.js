@@ -18,3 +18,4 @@ const tarefas = mongoose.model('tarefas', tarefasSchema);
 
 // exportar o model para ser utilizado
 module.exports = tarefas;
+  
